@@ -518,9 +518,13 @@ strong {
 .hero-image {
   position: absolute;
   z-index: 22;
-  top: 0;
-  width: 100%;
-  min-width: 550px;
+  top: -44px;
+  /* width: 100%; */
+  /* min-width: 550px; */
+  width: 340px;
+  height: 340px;
+  right: 67px;
+  border-radius: 100%;
 }
 
 .hero svg {
