@@ -525,6 +525,7 @@ strong {
   height: 340px;
   right: 67px;
   border-radius: 100%;
+  border: 5px solid #FFF;
 }
 
 .hero svg {
@@ -986,9 +987,9 @@ strong {
     height: 400px;
   }
 
-  .hero-image {
+  /* .hero-image {
     min-width: 650px;
-  }
+  } */
 
   .hero-title,
   .hero h2 {
