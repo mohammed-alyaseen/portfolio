@@ -114,7 +114,7 @@ button {
 }
 
 a {
-  color: var(--p-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -556,7 +556,7 @@ strong {
 
 .profile-small-title {
   border-right: 1px solid var(--border-color);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: var(--font-weight-bold);
   min-width: 140px;
   margin-right: 10px;
@@ -591,7 +591,7 @@ strong {
 }
 
 .featured-text {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .featured-border-bottom {
