@@ -77,38 +77,41 @@
   const lightboxClose = document.querySelector('.lightbox-close');
   const projectImages = document.querySelectorAll('.popup-image');
 
-  projectImages.forEach(image => {
-    image.addEventListener('click', (e) => {
-      e.preventDefault();
-      const imgSrc = image.getAttribute('href');
-      const imgAlt = image.querySelector('img').getAttribute('alt');
-      
-      lightboxImage.setAttribute('src', imgSrc);
-      lightboxImage.setAttribute('alt', imgAlt);
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  // Only initialize lightbox if elements exist
+  if (lightbox && lightboxImage && lightboxClose && projectImages.length > 0) {
+    projectImages.forEach(image => {
+      image.addEventListener('click', (e) => {
+        e.preventDefault();
+        const imgSrc = image.getAttribute('href');
+        const imgAlt = image.querySelector('img').getAttribute('alt');
+        
+        lightboxImage.setAttribute('src', imgSrc);
+        lightboxImage.setAttribute('alt', imgAlt);
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
     });
-  });
 
-  lightboxClose.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
+    lightboxClose.addEventListener('click', () => {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
-    }
-  });
+    });
 
-  // Close lightbox with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 
   // Sticky Navigation
   $(window).on('scroll', function() {
