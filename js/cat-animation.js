@@ -32,7 +32,7 @@ class Cat {
       this.sounds.meow = new Audio('sounds/meow.wav');
 
       // Set volume for each sound
-      this.sounds.meow.volume = 0.1;
+      this.sounds.meow.volume = 0.05;
       this.sounds.paw.volume = 0;
 
       // Add error handling for each sound
