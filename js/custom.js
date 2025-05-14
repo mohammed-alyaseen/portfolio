@@ -109,4 +109,13 @@
       document.body.style.overflow = '';
     }
   });
+
+  // Sticky Navigation
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 50) {
+      $('.navbar').addClass('is-sticky');
+    } else {
+      $('.navbar').removeClass('is-sticky');
+    }
+  });
 })(window.jQuery);
