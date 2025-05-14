@@ -519,8 +519,6 @@ strong {
   position: absolute;
   z-index: 22;
   top: -44px;
-  /* width: 100%; */
-  /* min-width: 550px; */
   width: 340px;
   height: 340px;
   right: 67px;
@@ -528,10 +526,14 @@ strong {
   border: 5px solid #FFF;
   animation: scaleIn 1s ease-out;
   transition: transform 0.3s ease;
+  filter: brightness(1.2) contrast(1.1) saturate(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .hero-image:hover {
   transform: scale(1.05);
+  filter: brightness(1.3) contrast(1.2) saturate(1.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .hero svg {
@@ -692,10 +694,14 @@ strong {
   border-radius: var(--border-radius-medium);
   animation: slideInLeft 1s ease-out;
   transition: transform 0.3s ease;
+  filter: brightness(1.2) contrast(1.1) saturate(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .about-image:hover {
   transform: scale(1.05);
+  filter: brightness(1.3) contrast(1.2) saturate(1.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .about-thumb {
@@ -1669,4 +1675,16 @@ html {
 .form-control:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem rgba(83, 93, 161, 0.25);
+}
+
+img[src*="happy-bearded-young-man.jpg"] {
+  filter: brightness(1.2) contrast(1.1) saturate(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+img[src*="happy-bearded-young-man.jpg"]:hover {
+  filter: brightness(1.3) contrast(1.2) saturate(1.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
 }
