@@ -1849,3 +1849,116 @@ img[src*="happy-bearded-young-man.jpg"]:hover {
   transform: scale(1.05);
 }
 
+.tech-masters-ad {
+  background: linear-gradient(135deg, rgba(20, 183, 137, 0.2), rgba(83, 93, 161, 0.2));
+  border-radius: var(--border-radius-small);
+  padding: 25px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tech-masters-ad::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(20, 183, 137, 0.1), rgba(83, 93, 161, 0.1));
+  z-index: 1;
+}
+
+.tech-masters-ad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ad-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.ad-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--white-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 28px;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.tech-masters-ad:hover .ad-icon {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  transform: rotate(360deg);
+}
+
+.tech-masters-ad h4 {
+  color: var(--white-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.tech-masters-ad p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.ad-link {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  padding: 8px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-small);
+}
+
+.ad-link i {
+  transition: transform 0.3s ease;
+}
+
+.ad-link:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+  border-color: var(--white-color);
+}
+
+.ad-link:hover i {
+  transform: translateX(5px);
+}
+
+@media (max-width: 767px) {
+  .tech-masters-ad {
+    padding: 20px;
+  }
+  
+  .ad-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .tech-masters-ad h4 {
+    font-size: 18px;
+  }
+  
+  .tech-masters-ad p {
+    font-size: 14px;
+  }
+}
+
