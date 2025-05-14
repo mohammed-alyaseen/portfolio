@@ -23,31 +23,95 @@
   </head>
 
   <body>
-    <!-- Include Header -->
+    <!-- Header -->
     <div id="header"></div>
 
     <main>
-      <!-- Include Hero Section -->
-      <div id="hero"></div>
+      <!-- Hero Section -->
+      <section id="hero"></section>
+      <aside class="hero-ad">
+        <div class="vertical-ad-banner">
+          <div class="ad-content">
+            <div class="ad-icon">
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <h4>Company</h4>
+            <p>Transform Your Business with Our Solutions</p>
+            <a href="#" class="ad-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </aside>
 
-      <!-- Include About Section -->
-      <div id="about"></div>
+      <!-- About Section -->
+      <section id="about"></section>
+      <aside class="about-ad">
+        <div class="horizontal-ad-banner">
+          <div class="ad-content">
+            <div class="ad-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <div class="ad-text">
+              <h4>Boost Your Growth</h4>
+              <p>Partner with Company for Digital Excellence</p>
+            </div>
+            <a href="#" class="ad-link">Get Started <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </aside>
 
-      <!-- Include Featured Section -->
-      <div id="featured"></div>
+      <!-- Featured Section -->
+      <section id="featured"></section>
+      <aside class="featured-ad">
+        <div class="feature-ad-banner">
+          <div class="ad-content">
+            <div class="ad-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4>Secure Solutions</h4>
+            <p>Trusted by Industry Leaders</p>
+            <a href="#" class="ad-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </aside>
 
-      <!-- Include Projects Section -->
-      <div id="projects"></div>
+      <!-- Projects Section -->
+      <section id="projects"></section>
+      <aside class="projects-ad">
+        <div class="horizontal-ad-banner">
+          <div class="ad-content">
+            <div class="ad-icon">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <div class="ad-text">
+              <h4>Fast Development</h4>
+              <p>Accelerate Your Project Timeline</p>
+            </div>
+            <a href="#" class="ad-link">Start Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </aside>
 
-      <!-- Include Services Section -->
-      <div id="services"></div>
+      <!-- Services Section -->
+      <section id="services"></section>
+      <aside class="services-ad">
+        <div class="feature-ad-banner">
+          <div class="ad-content">
+            <div class="ad-icon">
+              <i class="bi bi-gear"></i>
+            </div>
+            <h4>Premium Services</h4>
+            <p>Expert Solutions for Your Business</p>
+            <a href="#" class="ad-link">Discover More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </aside>
 
-      <!-- Include Contact Section -->
-      <div id="contact"></div>
+      <!-- Contact Section -->
+      <section id="contact"></section>
     </main>
 
-    <!-- Include Footer -->
-    <div id="footer"></div>
+    <!-- Footer -->
+    <footer id="footer"></footer>
 
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
@@ -60,16 +124,22 @@
 
     <!-- Load Components -->
     <script>
-      $(document).ready(function () {
-        // Load components
-        $("#header").load("components/header.html");
-        $("#hero").load("components/hero.html");
-        $("#about").load("components/about.html");
-        $("#featured").load("components/featured.html");
-        $("#services").load("components/services.html");
-        $("#projects").load("components/projects.html");
-        $("#contact").load("components/contact.html");
-        $("#footer").load("components/footer.html");
+      $(document).ready(function() {
+        const components = {
+          header: "components/header.html",
+          hero: "components/hero.html",
+          about: "components/about.html",
+          featured: "components/featured.html",
+          services: "components/services.html",
+          projects: "components/projects.html",
+          contact: "components/contact.html",
+          footer: "components/footer.html"
+        };
+
+        // Load all components
+        Object.entries(components).forEach(([id, path]) => {
+          $(`#${id}`).load(path);
+        });
       });
     </script>
   </body>
