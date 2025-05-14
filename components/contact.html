@@ -1,29 +1,129 @@
 <section class="contact section-padding" id="section_5">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-12 text-center">
         <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-          <img src="images/happy-bearded-young-man.jpg" class="avatar-image img-fluid" alt="" />
-
-          <h2 class="text-white ms-4 mb-0">Contact Me</h2>
+          <img src="images/white-desk-work-study-aesthetics.jpg" class="avatar-image img-fluid" alt="" />
+          <h2 class="text-white ms-4 mb-0">Get In Touch</h2>
         </div>
       </div>
+    </div>
 
-      <div class="col-lg-8 col-12 mx-auto">
-        <div class="custom-form contact-form" action="#" method="post" role="form">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12 col-12">
+        <div class="contact-wrapper">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-12">
-              <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="" />
+            <!-- Contact Info Cards -->
+            <div class="col-lg-4 col-md-12 col-12">
+              <div class="contact-info-cards">
+                <div class="contact-info-card">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4>Location</h4>
+                    <p>Damascus, Syria</p>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4>Email</h4>
+                    <p><a href="mailto:hello@company.com">hello@company.com</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4>Phone</h4>
+                    <p><a href="tel:010-020-0340">010-020-0340</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-person"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4>Name</h4>
+                    <p>Mohammed</p>
+                  </div>
+                </div>
+
+                <div class="contact-social">
+                  <h4>Follow Me</h4>
+                  <div class="social-icon">
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon-link">
+                          <i class="bi bi-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon-link">
+                          <i class="bi bi-github"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon-link">
+                          <i class="bi bi-twitter"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-12">
-              <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required="" />
-            </div>
+            <!-- Contact Form -->
+            <div class="col-lg-8 col-md-12 col-12">
+              <div class="contact-form">
+                <h3 class="form-title">Send Me a Message</h3>
+                <form class="custom-form" action="#" method="post" role="form">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <div class="form-floating">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required />
+                        <label for="name">Name</label>
+                      </div>
+                    </div>
 
-            <div class="col-12">
-              <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <div class="form-floating">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email" required />
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
 
-              <button type="submit" class="form-control">Send Message</button>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required />
+                        <label for="subject">Subject</label>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <textarea name="message" id="message" class="form-control" placeholder="Message" required></textarea>
+                        <label for="message">Message</label>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <button type="submit" class="custom-btn custom-border-btn">
+                        <span>Send Message</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
