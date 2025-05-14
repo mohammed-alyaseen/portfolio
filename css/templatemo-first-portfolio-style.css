@@ -1268,26 +1268,114 @@ strong {
   }
 
   .navbar {
-    background: var(--white-color);
+    background: rgba(83, 93, 161, 0.95);
     padding: 10px 0;
   }
 
   .navbar .container {
     background: transparent;
+    padding: 0 15px;
   }
 
   .navbar-brand {
-    color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 24px;
   }
 
-  .navbar-nav .nav-link {
-    color: var(--primary-color);
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: var(--white-color);
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler-icon:before,
+  .navbar-toggler-icon:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--white-color);
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler-icon:before {
+    top: -8px;
+  }
+
+  .navbar-toggler-icon:after {
+    bottom: -8px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  .navbar-collapse {
+    background: rgba(83, 93, 161, 0.98);
+    margin: 10px -15px -10px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar-nav {
     padding: 10px 0;
   }
 
-  .navbar .custom-btn {
-    border-color: var(--secondary-color);
+  .navbar-nav .nav-link {
+    color: var(--white-color);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link:hover {
     color: var(--secondary-color);
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+
+  .navbar .custom-btn {
+    border-color: var(--white-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar .custom-btn:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
   }
 
   .hero {
@@ -1347,6 +1435,19 @@ strong {
 }
 
 @media screen and (max-width: 575px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .navbar .container {
+    padding: 0 10px;
+  }
+
+  .navbar-collapse {
+    margin: 10px -10px -10px;
+    padding: 15px;
+  }
+
   .navbar .container {
     margin-right: 12px;
     margin-left: 12px;
