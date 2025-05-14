@@ -30,12 +30,10 @@ class Cat {
     // Create audio elements with error handling
     try {
       this.sounds.meow = new Audio('sounds/meow.wav');
-      this.sounds.paw = new Audio('sounds/paw.wav');
 
       // Set volume for each sound
-      this.sounds.meow.volume = 0.4;
-      this.sounds.purr.volume = 0.3;
-      this.sounds.paw.volume = 0.2;
+      this.sounds.meow.volume = 0.1;
+      this.sounds.paw.volume = 0;
 
       // Add error handling for each sound
       Object.entries(this.sounds).forEach(([key, sound]) => {
